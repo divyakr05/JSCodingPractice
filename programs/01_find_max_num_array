@@ -1,0 +1,29 @@
+const findMax1 = arr => {
+    return Math.max(...arr);
+}
+
+const findMax2 = arr => {
+    arr.sort((a, b) => a - b);
+    return arr[arr.length - 1];
+}
+
+const findMax3 = arr => {
+    let max = arr[0];
+    for(let i = 1; i < arr.length - 1; i++){
+        // Check if the current element is greater than the current max
+        // If it is, update the max
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+    return max;
+
+}
+
+const findMax4 = arr => {
+    return arr.reduce((prev, curr) => (prev > curr ? prev : curr), arr[0])
+
+}
+
+input = [95, 35, 63, 82, 125, 47, 12, 18, 29, 47, 3, 1, 5, 2];
+console.log(findMax4(input));

@@ -1,0 +1,14 @@
+const findSecondMax1 = (arr) => {
+    arr.sort((a, b) => a - b)
+    return arr[arr.length - 2]
+}
+
+
+const findSecondMax2 = (arr) => {
+    i = arr.indexOf(Math.max(...arr)) // find index of max
+    arr.splice(i, 1) // remove max from array
+    return Math.max(...arr) // find max of remaining array
+}
+
+input = [95, 35, 63, 82, 125, 47, 12, 18, 29, 47, 3, 1, 5, 2];
+console.log(findSecondMax2(input));
