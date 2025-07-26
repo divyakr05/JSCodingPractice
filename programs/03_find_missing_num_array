@@ -35,5 +35,5 @@ const findMissing3 = arr => {
 }
     
 
-input = [1, 5, 9, 3, 15];
+input = [1, 5, 9, 3, 15, 5];
 console.log(findMissing3(input));
